@@ -1,1 +1,18 @@
-
+{
+  "name": "pineapple-coin-dash",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "migrate:001": "psql \"$DATABASE_URL\" -f migrations/001_init.sql",
+    "migrate:002": "psql \"$DATABASE_URL\" -f migrations/002_indexes.sql",
+    "migrate": "npm run migrate:001 && npm run migrate:002"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "pg": "^8.12.0"
+  }
+}
