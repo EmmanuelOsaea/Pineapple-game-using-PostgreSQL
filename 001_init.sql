@@ -1,0 +1,7 @@
+-- 001_init.sql
+CREATE TABLE IF NOT EXISTS scores (
+  id BIGSERIAL PRIMARY KEY,
+  player_name VARCHAR(20) NOT NULL,
+  score INTEGER NOT NULL CHECK (score >= 0),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
