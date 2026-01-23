@@ -1,1 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pineapple Coin Dash</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Pineapple Coin Dash</h1>
 
+    <div class="hud" aria-label="HUD">
+      <div class="hudItem">Score: <span id="score">0</span></div>
+      <div class="hudItem">Best: <span id="best">—</span></div>
+      <div class="hudItem">Lives: <span id="lives">3</span></div>
+    </div>
+
+    <div class="actions">
+      <button id="btnStart" type="button">Start</button>
+      <button id="btnSubmit" type="button" disabled>Submit score</button>
+    </div>
+  </header>
+
+  <main>
+    <canvas id="game" width="960" height="540" aria-label="Game canvas"></canvas>
+
+    <section class="help">
+      <p>
+        Controls: <strong>Arrow Keys / WASD</strong> (desktop) •
+        <strong>Drag</strong> (mobile)
+      </p>
+    </section>
+  </main>
+
+  <script src="./game.js" defer></script>
+</body>
+</html>
